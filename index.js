@@ -15,7 +15,8 @@ require('dotenv').config({path: 'variables.env'})
 //Habilitar handlebars
 app.engine('handlebars',
     exphbs.engine({
-        defaultLayout: 'layout'
+        defaultLayout: 'layout',
+        helpers: require('./helpers/handlebars')
     })
 )
 app.set('view engine', 'handlebars')
